@@ -1,12 +1,11 @@
-<script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
-<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vektor — AI Analytics, Clarified</title>
+<script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -530,11 +529,16 @@
     </div>
     <div
 
-window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
-window.amplitude.init('d134b947e7641eee9dda5d2381774746', {
-  defaultTracking: {
-    sessions: true,
-    pageViews: true,
-    formInteractions: true
-  }
-});
+  <script>
+    window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+    window.amplitude.init('d134b947e7641eee9dda5d2381774746', {
+      defaultTracking: {
+        sessions: true,
+        pageViews: true,
+        formInteractions: true
+      }
+    });
+  </script>
+
+</body>
+</html>
