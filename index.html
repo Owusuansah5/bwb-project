@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acme Growth Platform</title>
   <!-- Amplitude Browser SDK -->
-
-  <script type="module">
-  import * as amplitude from "https://cdn.jsdelivr.net/npm/@amplitude/analytics-browser/+esm";
+  <script src="https://cdn.amplitude.com/script/AMPLITUDE_API_KEY.js"></script>
   <script>
-    window.amplitude.init("d134b947e7641eee9dda5d2381774746");
-
+  window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+  window.amplitude.init('d134b947e7641eee9dda5d2381774746', {"fetchRemoteConfig":true,"autocapture":{"attribution":true,"fileDownloads":true,"formInteractions":true,"pageViews":true,"sessions":true,"elementInteractions":true,"networkTracking":true,"webVitals":true,"frustrationInteractions":true}});
+  </script>
+ 
     // Track page view
     window.addEventListener("load", () => {
       amplitude.track("Landing Page Viewed", {
