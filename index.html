@@ -1,3 +1,6 @@
+<script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz"></script>
+<script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -526,3 +529,12 @@
       <p>Get a weekly briefing in Slack or email: what moved, what it means, and what to do about it. Curated, not a data dump.</p>
     </div>
     <div
+
+window.amplitude.add(window.sessionReplay.plugin({ sampleRate: 1 }));
+window.amplitude.init('d134b947e7641eee9dda5d2381774746', {
+  defaultTracking: {
+    sessions: true,
+    pageViews: true,
+    formInteractions: true
+  }
+});
