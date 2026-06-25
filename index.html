@@ -162,7 +162,7 @@
 <script>
   // Sign Up CTA Tracking
   document.getElementById("signupBtn").addEventListener("click", function() {
-    amplitude.track("Sign Up Clicked", {
+    window.amplitude.track("Sign Up Clicked", {
       button_text: "Sign Up",
       page_name: "Landing Page",
       section: "Hero"
@@ -173,7 +173,7 @@
 
   // Request Demo CTA Tracking
   document.getElementById("demoBtn").addEventListener("click", function() {
-    amplitude.track("Request Demo Clicked", {
+    window.amplitude.track("Request Demo Clicked", {
       button_text: "Request Demo",
       page_name: "Landing Page",
       section: "Hero"
